@@ -14,49 +14,39 @@
   <h3 align="center">Computación Flexible</h3>
 
   <p align="center">
-    Experimental dataset for classifying four levels of inter-turn short-circuit per phase in an induction motor
+    Redes neuronales artificiales y algoritmos genéticos.
     <br />
-    <a href="https://github.com/ibarram/CF"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/ibarram/CF"><strong>Explorar la documentación »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/ibarram/CF">View Demo</a>
+    <a href="https://github.com/ibarram/CF">Ver Demo</a>
     ·
-    <a href="https://github.com/ibarram/CF/issues">Report Bug</a>
+    <a href="https://github.com/ibarram/CF/issues">Reportar Bug</a>
     ·
-    <a href="https://github.com/ibarram/CF/issues">Request Feature</a>
+    <a href="https://github.com/ibarram/CF/issues">Requiere Modificaciones</a>
   </p>
 </div>
 
 <details><summary>Table of Contents</summary><p>
  
- * [Abstract](#abstract)
+ * [Resumen](#resumen)
 
- * [Testbench](#testbench)
-
- * [Get the data](#get-the-data)
-
- * [Database](#database)
-
- * [Loading data](#loading-data)
-
- * [Implementations](#implementations)
-
- * [Benchmark](#benchmark)
-
- * [Publications](#publications)
-
- * [Contact](#Contact)
-
- * [Citing ITSC database](#citing-itsc-database)
+ * [Redes Neuronales Artificiales](#RNA)
 
  * [License](#license)
 
 </p></details><p></p>
 
-## Abstract
+## Resumen
 
-The dataset contains the three-phase current signals measured from a squirrel-cage induction motor. The experimental tests were carried out for different fault levels in each winding phase; data was collected for a healthy state. The dataset consists of 13 categories: 12 inter-turn short-circuit faults per phase at 10%, 20%, 30%, and 40%, and healthy. Five repetitions were performed for each experimental condition; moreover, all measurements were collected in a steady state without load.
+La computación flexible en un subcampo multidisciplinario que se centra en el desarrollo de sistemas y algoritmos que pueden realizar tareas que normalmente requieren inteligencia humana, como el aprendizaje, la percepción, el razonamiento y la toma de decisión, este subcampo pertenece a la Inteligencia Artificial.
 
-## Testbench
+Dentro de la IA, las redes neuronales se relacionan principalmente con el subcampo del Aprendizaje Automático, que se basa en modelos inspirados en la estructura y el funcionamiento de las redes neuronales biológicas para realizar tareas de procesamiento de información, como el reconocimiento de patrones, el procesamiento de lenguaje natural y la visión por computadora.
+
+Los algoritmos genéticos, por otro lado, son una técnica de optimización y búsqueda que se utiliza en la IA para encontrar soluciones óptimas o aproximadas a problemas complejos mediante la evolución de poblaciones de soluciones potenciales a lo largo de generaciones, similar a cómo funciona la evolución en la naturaleza.
+
+Ambos enfoques, redes neuronales y algoritmos genéticos, son herramientas importantes en el campo de la inteligencia artificial y se utilizan en una variedad de aplicaciones, desde el procesamiento de datos hasta la toma de decisiones, la optimización y la resolución de problemas complejos.
+
+## Redes Neuronales Artificiales
 
 The dataset was acquired in the Laboratory of Electrical Engineering, Division of Engineering at Irapuato-Salamanca Campus of the University of Guanajuato, Mexico.
