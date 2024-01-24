@@ -31,7 +31,7 @@
  
  * [Resumen](#resumen)
 
- * [Redes Neuronales Artificiales](#RNA)
+ * [Redes Neuronales Artificiales](#Redes_Neuronales_Artificiales)
 
  * [License](#license)
 
@@ -49,4 +49,19 @@ Ambos enfoques, redes neuronales y algoritmos genéticos, son herramientas impor
 
 ## Redes Neuronales Artificiales
 
-The dataset was acquired in the Laboratory of Electrical Engineering, Division of Engineering at Irapuato-Salamanca Campus of the University of Guanajuato, Mexico.
+Las redes neuronales artificiales (RNA), también conocidas como redes neuronales o simplemente NN (por sus siglas en inglés, Neural Networks), son modelos computacionales inspirados en el funcionamiento del cerebro humano y diseñados para realizar tareas de aprendizaje automático y procesamiento de datos. Estas redes son una parte fundamental de la inteligencia artificial y han demostrado ser muy efectivas en una amplia gama de aplicaciones.
+
+Las redes neuronales artificiales se componen de unidades básicas llamadas "neuronas artificiales" o "nodos", que están organizadas en capas interconectadas. A continuación, se explican sus componentes y funcionamiento básico:
+
+1. **Neuronas Artificiales (Nodos):** Cada neurona artificial es una unidad de procesamiento que toma una o más entradas, realiza una suma ponderada de esas entradas y luego aplica una función de activación antes de emitir una salida. La función de activación introduce no linealidad en el modelo y es crucial para que la red pueda aprender y modelar relaciones complejas en los datos.
+
+2. **Capas:** Las neuronas se organizan en capas en la red neuronal. Las capas se dividen típicamente en tres tipos:
+    * **Capa de Entrada:** Recibe las señales de entrada y transmite estas señales a la capa oculta.
+    * **Capas Ocultas (Hidden Layers):** Estas capas intermedias procesan la información y realizan cálculos para aprender representaciones más abstractas y complejas de los datos.
+    * **Capa de Salida:** Produce la salida final de la red, que puede ser una clasificación, una predicción numérica o cualquier otro tipo de resultado deseado.
+
+3. **Conexiones Ponderadas:** Cada conexión entre neuronas tiene un peso asociado que determina la importancia relativa de la entrada en la neurona receptora. Estos pesos se ajustan durante el proceso de entrenamiento para aprender la relación entre las entradas y las salidas deseadas.
+
+4. **Aprendizaje:** Las redes neuronales artificiales aprenden ajustando los pesos de las conexiones a través de un proceso llamado entrenamiento. Esto se hace mediante algoritmos de optimización, como el descenso de gradiente, que minimizan una función de pérdida o error que cuantifica la diferencia entre las salidas predichas y las salidas reales.
+
+Las redes neuronales artificiales son capaces de aprender y representar patrones complejos en datos, lo que las hace adecuadas para una amplia variedad de aplicaciones, como reconocimiento de patrones, procesamiento de lenguaje natural, visión por computadora, traducción automática, juegos, control de robots y mucho más. Su versatilidad y capacidad para manejar datos no lineales las convierten en una herramienta poderosa en el campo del aprendizaje automático y la inteligencia artificial.
