@@ -31,7 +31,7 @@
  
  * [Resumen](#resumen)
 
- * [Redes Neuronales Artificiales](#Redes_Neuronales_Artificiales)
+ * [Redes Neuronales Artificiales](#Redes-Neuronales-Artificiales)
 
  * [License](#license)
 
@@ -65,3 +65,6 @@ Las redes neuronales artificiales se componen de unidades básicas llamadas "neu
 4. **Aprendizaje:** Las redes neuronales artificiales aprenden ajustando los pesos de las conexiones a través de un proceso llamado entrenamiento. Esto se hace mediante algoritmos de optimización, como el descenso de gradiente, que minimizan una función de pérdida o error que cuantifica la diferencia entre las salidas predichas y las salidas reales.
 
 Las redes neuronales artificiales son capaces de aprender y representar patrones complejos en datos, lo que las hace adecuadas para una amplia variedad de aplicaciones, como reconocimiento de patrones, procesamiento de lenguaje natural, visión por computadora, traducción automática, juegos, control de robots y mucho más. Su versatilidad y capacidad para manejar datos no lineales las convierten en una herramienta poderosa en el campo del aprendizaje automático y la inteligencia artificial.
+
+Las notas de clase referentes a las Redes Neuronales Artificiales puede descargarlas desde el siguiente enlace: [Notas_RNA](/doc/pdf/Notas_RNA.pdf).
+
