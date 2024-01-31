@@ -92,4 +92,4 @@ A pesar de su simplicidad y sus limitaciones (por ejemplo, solo puede clasificar
 
 Los pesos $w_i$ son 
 
-$$\textbf{w}(t+1)=\textbf{w}(t)+\eta\sum_{k=1}^{K}\left(\left(d(k)-y(k)\right)\cdot\textbf{x}(k)\right)+\mu\left(\textbf{w}(t)-\textbf{w}(t+1)\right$$
+$$\textbf{w}(t+1)=\textbf{w}(t)+\eta\sum_{k=1}^{K}\left(\left(d(k)-y(k)\right)\cdot\textbf{x}(k)\right)+\mu\left(\textbf{w}(t)-\textbf{w}(t+1)\right)$$
