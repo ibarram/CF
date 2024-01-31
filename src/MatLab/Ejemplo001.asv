@@ -19,7 +19,7 @@ id0 = cls==0;
 id1 = ~id0;
 
 vw = rand(3,1);
-nep = 100;
+nep = 1000;
 n_ap = 1/abs(max([x1;x2]))-eps;
 verr = zeros(1,nep);
 
@@ -31,12 +31,12 @@ for i1=1:nep
     id_err = err~=0;
     
     y1 = -xo*vw(1)/vw(2)-vw(3)/vw(2);
-    dvw = n_ap*([x1'; x2'; ones(1,nm)]*err);
+    dvw = n_ap*(err'*[x1 x2 ones(nm,1)]);
     vw = vw+dvw;
+end
 
     figure(1);
     plot(x1(id0), x2(id0), 'ro');
-    axis([rng_mn, rng_mx, rng_mn, rng_mx])
     hold on;
     plot(x1(id1), x2(id1), 'ks');
     plot(x1(id_err), x2(id_err), 'b*');
@@ -44,9 +44,3 @@ for i1=1:nep
     plot(xo, y1, 'k-');
     grid on;
     hold off;
-    pause(0.1);
-
-end
-
-figure(2)
-plot(1:nep,verr,'b*-')
