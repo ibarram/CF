@@ -90,6 +90,8 @@ El perceptrón simple aprende ajustando los pesos y el sesgo a través de un pro
 
 A pesar de su simplicidad y sus limitaciones (por ejemplo, solo puede clasificar linealmente problemas separables), el perceptrón simple ha sido fundamental en el desarrollo y la comprensión de redes neuronales más complejas y sigue siendo un concepto importante en el campo del aprendizaje automático y la inteligencia artificial.
 
-El algoritmo de aprendizaje ajusta los pesos $w$ mediante error entre las salida deseada $d$ y la saldia obtenida $y$. El factor de aprendizaje $eta$ que esta definido en el rango $\left(0<\eta<\frac{1}{|\textbf{x}(k)|_{max}}\right)$
+El algoritmo de aprendizaje ajusta los pesos $w$ en función del error existente entre las salidas deseadas $d$ y las salidas obtenidas $y$. El factor de aprendizaje $\eta$ que esta definido en el rango $\left(0<\eta<\frac{1}{|\textbf{x}(k)|_{max}}\right)$, permite ajustar la fracción del error que será usado en el ajuste del peso. El factor de momentum $\mu$ que esta definido en el rango de $\left(0.6<\mu<0.9\right)$, permite agregar un factor de velocidad de aprendizaje al algoritmo.
+
+El algoritmo de aprendizaje esta definido por la siguiente ecuación:
 
 $$\textbf{w}(t+1)=\textbf{w}(t)+\eta\sum_{k=1}^{K}\left(\left[d(k)-y(k)\right]\cdot\textbf{x}(k)\right)+\mu\left(\textbf{w}(t)-\textbf{w}(t+1)\right)$$
