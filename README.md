@@ -68,3 +68,14 @@ Las redes neuronales artificiales son capaces de aprender y representar patrones
 
 Las notas de clase referentes a las Redes Neuronales Artificiales puede descargarlas desde el siguiente enlace: [Notas_RNA](/doc/pdf/Notas_RNA.pdf).
 
+## Perceptrón simple
+Un perceptrón simple es un tipo de red neuronal artificial inventada en 1957 por Frank Rosenblatt. Puede considerarse como la forma más básica de una red neuronal y se utiliza principalmente para la clasificación binaria, es decir, para predecir si una entrada pertenece a una de dos posibles categorías ($0$ o $1$, sí o no, verdadero o falso, etc.).
+
+El funcionamiento de un perceptrón se basa en la suma ponderada de sus entradas para producir una salida. Las "entradas" (inputs) son características numéricas de un elemento que se quiere clasificar, y cada una de estas entradas se multiplica por un "peso" (weight) que indica la importancia de dicha entrada en la determinación de la salida. Además, a la suma de estas entradas ponderadas se le puede añadir un término llamado "sesgo" (bias), que ajusta la salida del perceptrón para ser más flexible.
+
+Matemáticamente, la salida $$y$$ de un perceptrón se calcula de la siguiente manera:
+
+f es una función de activación que decide si la suma ponderada de las entradas activa la neurona para producir la salida 1 o se queda inactiva produciendo la salida 0. Una función de activación común en los perceptrones simples es la función escalón.
+El perceptrón simple aprende ajustando los pesos y el sesgo a través de un proceso de entrenamiento con un conjunto de datos de entrada para el cual se conocen las salidas deseadas. El objetivo del entrenamiento es minimizar el error en las predicciones del modelo ajustando los pesos y el sesgo basándose en las diferencias entre las salidas predichas y las reales.
+
+A pesar de su simplicidad y sus limitaciones (por ejemplo, solo puede clasificar linealmente problemas separables), el perceptrón simple ha sido fundamental en el desarrollo y la comprensión de redes neuronales más complejas y sigue siendo un concepto importante en el campo del aprendizaje automático y la inteligencia artificial.
