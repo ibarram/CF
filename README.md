@@ -89,3 +89,7 @@ donde:
 El perceptrón simple aprende ajustando los pesos y el sesgo a través de un proceso de entrenamiento con un conjunto de datos de entrada para el cual se conocen las salidas deseadas. El objetivo del entrenamiento es minimizar el error en las predicciones del modelo ajustando los pesos y el sesgo basándose en las diferencias entre las salidas predichas y las reales.
 
 A pesar de su simplicidad y sus limitaciones (por ejemplo, solo puede clasificar linealmente problemas separables), el perceptrón simple ha sido fundamental en el desarrollo y la comprensión de redes neuronales más complejas y sigue siendo un concepto importante en el campo del aprendizaje automático y la inteligencia artificial.
+
+Los pesos $w_i$ son 
+
+$\textbf{w}(t+1)=\textbf{w}(t)+\eta\sum_{k=1}^K\left(d(k)-y(k)\right)$
