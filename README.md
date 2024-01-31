@@ -75,6 +75,10 @@ El funcionamiento de un perceptrón se basa en la suma ponderada de sus entradas
 
 Matemáticamente, la salida $y$ de un perceptrón se calcula de la siguiente manera:
 
+$$y=f(w_1x_1+w_2x_2+...+w_x_n+\theta)$$
+
+donde:
+
 f es una función de activación que decide si la suma ponderada de las entradas activa la neurona para producir la salida 1 o se queda inactiva produciendo la salida 0. Una función de activación común en los perceptrones simples es la función escalón.
 El perceptrón simple aprende ajustando los pesos y el sesgo a través de un proceso de entrenamiento con un conjunto de datos de entrada para el cual se conocen las salidas deseadas. El objetivo del entrenamiento es minimizar el error en las predicciones del modelo ajustando los pesos y el sesgo basándose en las diferencias entre las salidas predichas y las reales.
 
