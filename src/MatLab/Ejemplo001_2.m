@@ -70,8 +70,9 @@ end
 
 figure(2)
 plot(1:nep_mx,vMSE(1:nep_mx),'b*-');
+axis([1, nep_mx, min(vMSE), max(vMSE)])
 grid on;
 ylabel('MSE');
 xlabel('Epoca');
-title('');
+title('Grafica de demespeño para un perceptrón simple');
 print('-f2', '-djpeg90', '-r300', 'Desempeno.jpg')
