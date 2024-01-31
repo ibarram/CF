@@ -75,7 +75,7 @@ El funcionamiento de un perceptrón se basa en la suma ponderada de sus entradas
 
 Matemáticamente, la salida $y$ de un perceptrón se calcula de la siguiente manera:
 
-$$y=f(w_1x_1+w_2x_2+...+w_nx_n+\theta)$$
+$$y=f(w_1x_1+w_2x_2+...+w_nx_n+\theta)=f(\sum_{i=1}^{n}w_ix_i+\theta)$$
 
 donde:
 
