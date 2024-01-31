@@ -35,7 +35,13 @@
 
  * [Perceptrón simple](#Perceptrón-simple)
 
- * [License](#license)
+ * [Publicaciones](#Publicaciones)
+
+ * [Citando las notas](#citando-las-notas)
+
+ * [Contacto](#Contacto)
+
+ * [Licencia](#licencia)
 
 </p></details><p></p>
 
@@ -96,13 +102,80 @@ El algoritmo de aprendizaje esta definido por la siguiente ecuación:
 
 $$\textbf{w}(t+1)=\textbf{w}(t)+\eta\sum_{k=1}^{K}\left(\left[d(k)-y(k)\right]\cdot\textbf{x}(k)\right)+\mu\left(\textbf{w}(t)-\textbf{w}(t-1)\right)$$
 
+
 <picture>
  <source media="(prefers-color-scheme: dark)" srcset="doc/img/PS_test04.gif">
  <img alt="Imagen con fondo transparente para modo claro, y con fondo blanco en modo obscuro." src="doc/img/PS_test04.gif">
 </picture>
+Fig. 1. Gráfica del algoritmo de entrenamiento para un perceptrón simple con $\eta=\frac{1}{|\textbf{x}(k)|_{max}}$
 
 <picture>
  <source media="(prefers-color-scheme: dark)" srcset="doc/img/PS_desempeno.jpg">
  <img alt="Imagen con fondo transparente para modo claro, y con fondo blanco en modo obscuro." src="doc/img/PS_test04.gif">
 </picture>
+Fig. 2. Gráfica de la evolución del desempeño en función del MSE contra las epocas
+
+## Publicaciones
+
+Publicaciones de la comunidad cientifica que usan las notas:
+
+1. S. Ledesma, M. -A. Ibarra-Manzano, M. -G. Garcia-Hernandez and D. -L. Almanza-Ojeda, "Neural lab a simulator for artificial neural networks," 2017 Computing Conference, London, UK, 2017, pp. 716-721, [DOI: 10.1109/SAI.2017.8252175](https://doi.org/10.1109/SAI.2017.8252175).
+
+2. M. T. Villalon-Hernandez, D. L. Almanza-Ojeda, M. A. Ibarra-Manzano, "Color-Texture Image Analysis for Automatic Failure Detection in Tiles", MCPR 2017 Pattern Recognition. Lecture Notes in Computer Science, vol 10267. Springer, Cham. [DOI: 10.1007/978-3-319-59226-8_16](https://doi.org/10.1007/978-3-319-59226-8_16).
+
+3. M. A. Ibarra-manzano, D. L. Almanza-ojeda, A. Hernandez-Gutierrez, J. P. Amezquita-sanchez and L. F. Lopez-martinez, "Design and implementation of a self-tuning control using artificial neural networks of second order," 2006 Multiconference on Electronics and Photonics, Guanajuato, Mexico, 2006, pp. 226-229, [DOI: 10.1109/MEP.2006.335669](https://doi.org/10.1109/MEP.2006.335669).
+
+4. J. J. Aviles Ferrera, M. A. Ibarra Manzano, D. L. Almanza Ojeda and A. H. Gutierrez, "Electric motors analysis by means of their characterization using stochastic processing and artificial neural networks of second order," 2006 Multiconference on Electronics and Photonics, Guanajuato, Mexico, 2006, pp. 230-233, [DOI: 10.1109/MEP.2006.335670](https://doi.org/10.1109/MEP.2006.335670).
+
+5. M.-A. Ibarra-Manzano, J.-G. Avina-Cervantes, D.-L. Almanza-Ojeda, J. Ruiz-Pinales, "Detection of Closure Features in Gray-Level Images by Using Support Vector Machines", Telecommunications and Radio Engineering, Vol. 64, Num. 7, 2005, pp. 923-929, ISSN 0040-2508, e-ISSN: 1943-6009, [DOI:10.1615/TelecomRadEng.v64.i11.50](https://doi.org/10.1615/TelecomRadEng.v64.i11.50)
+
+## Citando las notas
+
+Si utiliza las notas en algún artículo científico, apreciaremos que haga referencia al siguiente artículo:
+
+**Mario-Alberto Ibarra-Manzano, Juan-Gabriel Avina-Cervantes, Dora-Luz Almanza-Ojeda, Jose Ruiz-Pinales, Detection of Closure Features in Gray-Level Images by Using Support Vector Machines, Telecommunications and Radio Engineering, Vol. 64, Num. 7, 2005, pp. 923-929, ISSN 0040-2508, e-ISSN: 1943-6009, [DOI:10.1615/TelecomRadEng.v64.i11.50](https://doi.org/10.1615/TelecomRadEng.v64.i11.50)**
+
+Biblatex entry:
+```latex
+@article{CARDENASCORNEJO2023113680,
+title = {Detection of Closure Features in Gray-Level Images by Using Support Vector Machines},
+journal = {Telecommunications and Radio Engineering},
+volume = {64},
+number = {7},
+pages = {923--929},
+year = {2005},
+issn = {0263-2241},
+doi = {https://doi.org/10.1615/TelecomRadEng.v64.i11.50},
+url = {https://www.dl.begellhouse.com/journals/0632a9d54950b268,66fcef0f6e0d427b,29509f5d26c13348.html},
+author = {Mario-Alberto Ibarra-Manzano and Juan-Gabriel Avina-Cervantes and Dora-Luz Almanza-Ojeda and Jose Ruiz-Pinales}
+}
+```
+
+## Contacto
+
+[Dr. M.-A. Ibarra-Manzano](mailto:ibarram@ugto.mx?subject=[GitHub]%20Notas%20RNA) - [ORCID: 0000-0003-4317-0248](https://orcid.org/0000-0003-4317-0248) - [SCOPUS: 15837259000](https://www.scopus.com/authid/detail.uri?authorId=15837259000)
+
+## Licencia
+
+MIT License
+
+Copyright (c) 2024 Mario Alberto Ibarra Manzano
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 

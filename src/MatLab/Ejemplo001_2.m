@@ -74,5 +74,5 @@ axis([1, nep_mx, min(vMSE), max(vMSE)])
 grid on;
 ylabel('MSE');
 xlabel('Epoca');
-title('Grafica de demespeño para un perceptrón simple');
+title('Grafica de desempeño para un perceptrón simple');
 print('-f2', '-djpeg90', '-r300', 'Desempeno.jpg')
