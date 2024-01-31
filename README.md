@@ -107,12 +107,15 @@ $$\textbf{w}(t+1)=\textbf{w}(t)+\eta\sum_{k=1}^{K}\left(\left[d(k)-y(k)\right]\c
  <source media="(prefers-color-scheme: dark)" srcset="doc/img/PS_test04.gif">
  <img alt="Imagen con fondo transparente para modo claro, y con fondo blanco en modo obscuro." src="doc/img/PS_test04.gif">
 </picture>
+
 Fig. 1. Gráfica del algoritmo de entrenamiento para un perceptrón simple con $\eta=\frac{1}{|\textbf{x}(k)|_{max}}$
+
 
 <picture>
  <source media="(prefers-color-scheme: dark)" srcset="doc/img/PS_desempeno.jpg">
  <img alt="Imagen con fondo transparente para modo claro, y con fondo blanco en modo obscuro." src="doc/img/PS_test04.gif">
 </picture>
+
 Fig. 2. Gráfica de la evolución del desempeño en función del MSE contra las epocas
 
 ## Publicaciones
