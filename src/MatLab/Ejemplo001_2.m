@@ -19,7 +19,7 @@ id0 = cls==0;
 id1 = ~id0;
 
 vw = rand(3,1);
-nep = 100;
+nep = 200;
 n_ap = 1/abs(max([x1;x2]))-eps;
 vMSE = zeros(1,nep);
 
@@ -69,7 +69,9 @@ for idx = 1:nep_mx
 end
 
 figure(2)
-plot(1:nep,vMSE,'b*-');
+plot(1:nep_mx,vMSE(1:nep_mx),'b*-');
 grid on;
 ylabel('MSE');
-xlabel('Epoch');
+xlabel('Epoca');
+title('');
+print('-f2', '-djpeg90', '-r300', 'Desempeno.jpg')

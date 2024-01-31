@@ -19,7 +19,7 @@ id0 = cls==0;
 id1 = ~id0;
 
 vw = rand(3,1);
-nep = 100;
+nep = 200;
 n_ap = 1/abs(max([x1;x2]))-eps;
 vMSE = zeros(1,nep);
 
@@ -35,12 +35,13 @@ for i1=1:nep
     dvw = n_ap*([x1'; x2'; ones(1,nm)]*err);
     vw = vw+dvw;
 
-    if vMSE(i1)==0
-        nep_mx = i1;
+    if i1>2
+        if (vMSE(i1)==0)&&(vMSE(i1-1)>0)
+            nep_mx = i1;
+        end
     end
 
     fig1 = figure(1);
-    eje1 = axes();
     plot(x1(id0), x2(id0), 'ro');
     axis([rng_mn, rng_mx, rng_mn, rng_mx])
     hold on;
@@ -51,7 +52,7 @@ for i1=1:nep
     xlabel('x_1');
     ylabel('x_2');
     grid on;
-    title('Perceptrón simple (MSE = )')
+    title(sprintf('Perceptrón simple (Epoca = %d, MSE = %.4f)', i1, vMSE(i1)))
     hold off;
     frame = getframe(fig1);
     im{i1} = frame2im(frame);
@@ -68,7 +69,9 @@ for idx = 1:nep_mx
 end
 
 figure(2)
-plot(1:nep,vMSE,'b*-');
+plot(1:nep_mx,vMSE(1:nep_mx),'b*-');
 grid on;
 ylabel('MSE');
-xlabel('Epoch');
+xlabel('Epoca');
+title('');
+print('-f2', '-djpeg90', '-r300', 'Desempeno.jpg')

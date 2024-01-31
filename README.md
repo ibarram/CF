@@ -94,6 +94,15 @@ El algoritmo de aprendizaje ajusta los pesos $w$ en función del error existente
 
 El algoritmo de aprendizaje esta definido por la siguiente ecuación:
 
-$$\textbf{w}(t+1)=\textbf{w}(t)+\eta\sum_{k=1}^{K}\left(\left[d(k)-y(k)\right]\cdot\textbf{x}(k)\right)+\mu\left(\textbf{w}(t)-\textbf{w}(t+1)\right)$$
+$$\textbf{w}(t+1)=\textbf{w}(t)+\eta\sum_{k=1}^{K}\left(\left[d(k)-y(k)\right]\cdot\textbf{x}(k)\right)+\mu\left(\textbf{w}(t)-\textbf{w}(t-1)\right)$$
 
-![Algoritmo de aprendizaje](/doc/img/test03.gif)
+<picture>
+ <source media="(prefers-color-scheme: dark)" srcset="doc/img/PS_test04.gif">
+ <img alt="Imagen con fondo transparente para modo claro, y con fondo blanco en modo obscuro." src="doc/img/PS_test04.gif">
+</picture>
+
+<picture>
+ <source media="(prefers-color-scheme: dark)" srcset="doc/img/PS_desempeno.jpg">
+ <img alt="Imagen con fondo transparente para modo claro, y con fondo blanco en modo obscuro." src="doc/img/PS_test04.gif">
+</picture>
+
