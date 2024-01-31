@@ -21,13 +21,13 @@ id1 = ~id0;
 vw = rand(3,1);
 nep = 100;
 n_ap = 1/abs(max([x1;x2]))-eps;
-verr = zeros(1,nep);
+vMSE = zeros(1,nep);
 
 for i1=1:nep
     u = [x1 x2 ones(nm,1)]*vw;
     fu = u>=0;
     err = cls-fu;
-    verr(i1) = sum(abs(err));
+    vMSE(i1) = sqrt(err'*err)/nm;
     id_err = err~=0;
     
     y1 = -xo*vw(1)/vw(2)-vw(3)/vw(2);
@@ -49,4 +49,6 @@ for i1=1:nep
 end
 
 figure(2)
-plot(1:nep,verr,'b*-')
+plot(1:nep,vMSE,'b*-');
+ylabel('MSE');
+xlabel('Epoch');
