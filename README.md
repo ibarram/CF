@@ -73,7 +73,7 @@ Un perceptrón simple es un tipo de red neuronal artificial inventada en 1957 po
 
 El funcionamiento de un perceptrón se basa en la suma ponderada de sus entradas para producir una salida. Las "entradas" (inputs) son características numéricas de un elemento que se quiere clasificar, y cada una de estas entradas se multiplica por un "peso" (weight) que indica la importancia de dicha entrada en la determinación de la salida. Además, a la suma de estas entradas ponderadas se le puede añadir un término llamado "sesgo" (bias), que ajusta la salida del perceptrón para ser más flexible.
 
-Matemáticamente, la salida $$y$$ de un perceptrón se calcula de la siguiente manera:
+Matemáticamente, la salida $y$ de un perceptrón se calcula de la siguiente manera:
 
 f es una función de activación que decide si la suma ponderada de las entradas activa la neurona para producir la salida 1 o se queda inactiva produciendo la salida 0. Una función de activación común en los perceptrones simples es la función escalón.
 El perceptrón simple aprende ajustando los pesos y el sesgo a través de un proceso de entrenamiento con un conjunto de datos de entrada para el cual se conocen las salidas deseadas. El objetivo del entrenamiento es minimizar el error en las predicciones del modelo ajustando los pesos y el sesgo basándose en las diferencias entre las salidas predichas y las reales.
