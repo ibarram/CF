@@ -33,6 +33,8 @@
 
  * [Redes Neuronales Artificiales](#Redes-Neuronales-Artificiales)
 
+ * [Perceptrón simple](#Perceptrón-simple)
+
  * [License](#license)
 
 </p></details><p></p>
