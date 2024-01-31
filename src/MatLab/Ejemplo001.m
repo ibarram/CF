@@ -42,6 +42,8 @@ for i1=1:nep
     plot(x1(id_err), x2(id_err), 'b*');
     plot(xo, yo, 'b-');
     plot(xo, y1, 'k-');
+    xlabel('x_1');
+    ylabel('x_2');
     grid on;
     hold off;
     pause(0.1);
@@ -50,5 +52,6 @@ end
 
 figure(2)
 plot(1:nep,vMSE,'b*-');
+grid on;
 ylabel('MSE');
 xlabel('Epoch');
