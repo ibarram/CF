@@ -118,7 +118,7 @@ Fig. 1. Gráfica del algoritmo de entrenamiento para un perceptrón simple con $
 
 Fig. 2. Gráfica de la evolución del desempeño en función del MSE contra las epocas
 
-La implementación en MatLab del perceptrón simple para dos entradas $x_1$ y $x_2$ se muestra en el código [Ejemplo001.m](/src/MatLab/Ejemplo001.m).
+La implementación en MatLab del perceptrón simple para dos entradas $x_1$ y $x_2$ se muestra en el código [Ejemplo001.m](https://github.com/ibarram/CF/blob/main/src/MatLab/Ejemplo001.m).
 
 
 <picture>
