@@ -136,6 +136,21 @@ Fig. 3. Gráfica del algoritmo de entrenamiento para un perceptrón simple con $
 
 Fig. 4. Gráfica de la evolución del desempeño en función del MSE contra las epocas
 
+<picture>
+ <source media="(prefers-color-scheme: dark)" srcset="doc/img/PS_test06.gif">
+ <img alt="Imagen con fondo transparente para modo claro, y con fondo blanco en modo obscuro." src="doc/img/PS_test04.gif">
+</picture>
+
+Fig. 3. Gráfica del algoritmo de entrenamiento para un perceptrón simple con $\eta=\frac{1}{|\textbf{x}(k)|_{max}}$ para tres entredas $x_1$, $x_2$ y $x_1 \cdot x_2$.
+
+
+<picture>
+ <source media="(prefers-color-scheme: dark)" srcset="doc/img/PS_desempeno3.jpg">
+ <img alt="Imagen con fondo transparente para modo claro, y con fondo blanco en modo obscuro." src="doc/img/PS_test04.gif">
+</picture>
+
+Fig. 4. Gráfica de la evolución del desempeño en función del MSE contra las epocas
+
 ## Publicaciones
 
 Publicaciones de la comunidad cientifica que usan las notas:
