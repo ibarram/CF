@@ -45,6 +45,7 @@ for i1=1:nep
     xlabel('x_1');
     ylabel('x_2');
     grid on;
+    title(sprintf('Perceptrón simple (Epoca = %d, MSE = %.4f)', i1, vMSE(i1)));
     hold off;
     pause(0.1);
 
@@ -52,6 +53,8 @@ end
 
 figure(2)
 plot(1:nep,vMSE,'b*-');
+axis([1, nep_mx, min(vMSE), max(vMSE)]);
 grid on;
 ylabel('MSE');
-xlabel('Epoch');
+xlabel('Epoca');
+title('Grafica de desempeño para un perceptrón simple');

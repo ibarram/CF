@@ -108,7 +108,7 @@ $$\textbf{w}(t+1)=\textbf{w}(t)+\eta\sum_{k=1}^{K}\left(\left[d(k)-y(k)\right]\c
  <img alt="Imagen con fondo transparente para modo claro, y con fondo blanco en modo obscuro." src="doc/img/PS_test04.gif">
 </picture>
 
-Fig. 1. Gráfica del algoritmo de entrenamiento para un perceptrón simple con $\eta=\frac{1}{|\textbf{x}(k)|_{max}}$
+Fig. 1. Gráfica del algoritmo de entrenamiento para un perceptrón simple con $\eta=\frac{1}{|\textbf{x}(k)|_{max}}$ para dos entradas $x_1$ y $x_2$.
 
 
 <picture>
@@ -117,6 +117,23 @@ Fig. 1. Gráfica del algoritmo de entrenamiento para un perceptrón simple con $
 </picture>
 
 Fig. 2. Gráfica de la evolución del desempeño en función del MSE contra las epocas
+
+La implementación en MatLab del perceptrón simple para dos entradas $x_1$ y $x_2$ se muestra en el código [Ejemplo001.m](/src/MatLab/Ejemplo001.m).
+
+<picture>
+ <source media="(prefers-color-scheme: dark)" srcset="doc/img/PS_test05.gif">
+ <img alt="Imagen con fondo transparente para modo claro, y con fondo blanco en modo obscuro." src="doc/img/PS_test04.gif">
+</picture>
+
+Fig. 3. Gráfica del algoritmo de entrenamiento para un perceptrón simple con $\eta=\frac{1}{|\textbf{x}(k)|_{max}}$ para tres entredas $x_1$, $x_2$ y $x_3$.
+
+
+<picture>
+ <source media="(prefers-color-scheme: dark)" srcset="doc/img/PS_desempeno2.jpg">
+ <img alt="Imagen con fondo transparente para modo claro, y con fondo blanco en modo obscuro." src="doc/img/PS_test04.gif">
+</picture>
+
+Fig. 4. Gráfica de la evolución del desempeño en función del MSE contra las epocas
 
 ## Publicaciones
 

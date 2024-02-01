@@ -24,6 +24,7 @@ n_ap = 1/abs(max([x1;x2]))-eps;
 vMSE = zeros(1,nep);
 
 nep_mx = nep;
+im = cell(nep, 1);
 for i1=1:nep
     u = [x1 x2 ones(nm,1)]*vw;
     fu = u>=0;
@@ -52,7 +53,7 @@ for i1=1:nep
     xlabel('x_1');
     ylabel('x_2');
     grid on;
-    title(sprintf('Perceptrón simple (Epoca = %d, MSE = %.4f)', i1, vMSE(i1)))
+    title(sprintf('Perceptrón simple (Epoca = %d, MSE = %.4f)', i1, vMSE(i1)));
     hold off;
     frame = getframe(fig1);
     im{i1} = frame2im(frame);
@@ -70,7 +71,7 @@ end
 
 figure(2)
 plot(1:nep_mx,vMSE(1:nep_mx),'b*-');
-axis([1, nep_mx, min(vMSE), max(vMSE)])
+axis([1, nep_mx, min(vMSE), max(vMSE)]);
 grid on;
 ylabel('MSE');
 xlabel('Epoca');
