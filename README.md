@@ -120,6 +120,7 @@ Fig. 2. Gráfica de la evolución del desempeño en función del MSE contra las 
 
 La implementación en MatLab del perceptrón simple para dos entradas $x_1$ y $x_2$ se muestra en el código [Ejemplo001.m](/src/MatLab/Ejemplo001.m).
 
+
 <picture>
  <source media="(prefers-color-scheme: dark)" srcset="doc/img/PS_test05.gif">
  <img alt="Imagen con fondo transparente para modo claro, y con fondo blanco en modo obscuro." src="doc/img/PS_test04.gif">
