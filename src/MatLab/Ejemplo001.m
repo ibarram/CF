@@ -9,8 +9,10 @@ nm = 100;
 x1 = (rng_mx-rng_mn)*rand(nm, 1)+rng_mn;
 x2 = (rng_mx-rng_mn)*rand(nm, 1)+rng_mn;
 
-m = rand();
-b = rand();
+%m = rand();
+m = 0.8074;
+%b = rand();
+b = 0.6550;
 xo = sort(x1);
 yo = m.*xo+b;
 x2e = m.*x1+b;
@@ -21,7 +23,11 @@ id1 = ~id0;
 vw = rand(3,1);
 nep = 100;
 n_ap = 1/abs(max([x1;x2]))-eps;
+mu = 0.7;
+vw1 = vw;
+avw1 = vw1;
 vMSE = zeros(1,nep);
+vMSE1 = zeros(1,nep);
 
 for i1=1:nep
     u = [x1 x2 ones(nm,1)]*vw;
@@ -29,10 +35,22 @@ for i1=1:nep
     err = cls-fu;
     vMSE(i1) = sqrt(err'*err)/nm;
     id_err = err~=0;
+
+    u1 = [x1 x2 ones(nm,1)]*vw1;
+    fu1 = u1>=0;
+    err1 = cls-fu1;
+    vMSE1(i1) = sqrt(err1'*err1)/nm;
+    id_err1 = err1~=0;
     
     y1 = -xo*vw(1)/vw(2)-vw(3)/vw(2);
     dvw = n_ap*([x1'; x2'; ones(1,nm)]*err);
     vw = vw+dvw;
+
+    y2 = -xo*vw1(1)/vw1(2)-vw1(3)/vw1(2);
+    dvw1 = n_ap*([x1'; x2'; ones(1,nm)]*err1);
+    aavw1 = avw1;
+    avw1 = vw1;
+    vw1 = vw1+dvw1+mu*(avw1-aavw1);
 
     figure(1);
     plot(x1(id0), x2(id0), 'ro');
@@ -41,7 +59,8 @@ for i1=1:nep
     plot(x1(id1), x2(id1), 'ks');
     plot(x1(id_err), x2(id_err), 'b*');
     plot(xo, yo, 'b-');
-    plot(xo, y1, 'k-');
+    plot(xo, y1, 'k--');
+    plot(xo, y2, 'k-.');
     xlabel('x_1');
     ylabel('x_2');
     grid on;
@@ -53,6 +72,8 @@ end
 
 figure(2)
 plot(1:nep,vMSE,'b*-');
+hold on;
+plot(1:nep,vMSE1,'ko-');
 axis([1, nep, min(vMSE), max(vMSE)]);
 grid on;
 ylabel('MSE');
