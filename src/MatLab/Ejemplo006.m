@@ -45,8 +45,8 @@ pause(0.1);
 
 % w1.*x1.^2+w2.*x2.^2+w3.*x1+w4.*x2+th
 vw = rand(5,1);
-nep = 100;
-n_ap = 1/abs(max([x1;x2;x1.^2;x2.^2]))-eps;
+nep = 1000;
+n_ap = 1/abs(max([x1;x2;x1.^2;x2.^2]))/10-eps;
 vMSE = zeros(1,nep);
 for i1=1:nep
     u = [x1.^2 x2.^2 x1 x2 ones(nm,1)]*vw;
