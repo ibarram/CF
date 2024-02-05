@@ -102,7 +102,7 @@ El algoritmo de aprendizaje esta definido por la siguiente ecuación:
 
 $$\textbf{w}(t+1)=\textbf{w}(t)+\eta\sum_{k=1}^{K}\left(\left[d(k)-y(k)\right]\cdot\textbf{x}(k)\right)+\mu\left(\textbf{w}(t)-\textbf{w}(t-1)\right)$$
 
-La figure 1 muestra un problema separable en el espacio $x_1$ y $x_2$, la línea azul separa las dos clases (cuadros negros y círculo rojo). La línea negra es la estimación del perceptrón simple, las muestras mal clasificadas son marcadas por asteriscos azules. En el titulo se muestra el error cuadrático medio ($MSE$) para cada una de las épocas. El algoritmo de aprendizaje utiliza una $\eta=\frac{1}{|\textbf{X(k)}|_{max}}-\epsilon$ y un $\mu=0$, la figura 2 muestra la evolución del $MSE$ a lo largo de las épocas.
+La figure 1 muestra un problema separable en el espacio $x_1$ y $x_2$, la línea azul separa las dos clases ($\square$ y círculo rojo). La línea negra es la estimación del perceptrón simple, las muestras mal clasificadas son marcadas por asteriscos azules. En el titulo se muestra el error cuadrático medio ($MSE$) para cada una de las épocas. El algoritmo de aprendizaje utiliza una $\eta=\frac{1}{|\textbf{X(k)}|_{max}}-\epsilon$ y un $\mu=0$, la figura 2 muestra la evolución del $MSE$ a lo largo de las épocas.
 
 <picture>
  <source media="(prefers-color-scheme: dark)" srcset="doc/img/PS_test04.gif">
