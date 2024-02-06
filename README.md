@@ -102,7 +102,7 @@ El algoritmo de aprendizaje esta definido por la siguiente ecuación:
 
 $$\textbf{w}(t+1)=\textbf{w}(t)+\eta\sum_{k=1}^{K}\left(\left[d(k)-y(k)\right]\cdot\textbf{x}(k)\right)+\mu\left(\textbf{w}(t)-\textbf{w}(t-1)\right)$$
 
-La figure 1 muestra un problema separable en el espacio $x_1$ y $x_2$, la línea azul separa las dos clases ($\textcolor{black}{\square}$ y $\textcolor{red}{\bigcirc}$). La línea negra es la estimación del perceptrón simple, las muestras mal clasificadas son marcadas por $\textcolor{blue}{\ast}$. En el titulo se muestra el error cuadrático medio ($MSE$) para cada una de las épocas. El algoritmo de aprendizaje utiliza una $\eta=\frac{1}{|\textbf{X(k)}|_{max}}-\epsilon$ y un $\mu=0$, la figura 2 muestra la evolución del $MSE$ a lo largo de las épocas.
+La figure 1 muestra un problema separable en el espacio $x_1$ y $x_2$, la línea azul ($d(k)$) separa las dos clases ($\textcolor{black}{\square}$ y $\textcolor{red}{\bigcirc}$). La línea negra es la estimación del perceptrón simple ($y(k)$), las muestras mal clasificadas son marcadas por $\textcolor{blue}{\ast}$. En el titulo se muestra el error cuadrático medio ($MSE$) para cada una de las épocas. El algoritmo de aprendizaje utiliza una $\eta=\frac{1}{|\textbf{X(k)}|_{max}}-\epsilon$ y un $\mu=0$, la figura 2 muestra la evolución del $MSE$ a lo largo de las épocas.
 
 <picture>
  <source media="(prefers-color-scheme: dark)" srcset="doc/img/PS_test04.gif">
@@ -119,7 +119,7 @@ Fig. 1. Gráfica del algoritmo de entrenamiento para un perceptrón simple con $
 
 Fig. 2. Gráfica de la evolución del desempeño en función del MSE contra las epocas
 
-La implementación en MatLab del perceptrón simple para dos entradas $x_1$ y $x_2$ se muestra en el código [Ejemplo001.m](https://github.com/ibarram/CF/blob/main/src/MatLab/Ejemplo001.m).
+La implementación en MatLab para el perceptrón simple con dos entradas $x_1$ y $x_2$ se muestra en el código [Ejemplo001.m](https://github.com/ibarram/CF/blob/main/src/MatLab/Ejemplo001.m).
 
 
 <picture>
