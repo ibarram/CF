@@ -47,7 +47,7 @@ pause(0.1);
 vw = rand(5,1);
 nep = 1000;
 rz = ceil(sum(id0)/sum(id1));
-n_ap = 1/(rz*abs(max([x1;x2;x1.^2;x2.^2])))-eps;
+n_ap = 1/abs(max([x1;x2;x1.^2;x2.^2]))/rz-eps;
 vMSE = zeros(1,nep);
 for i1=1:nep
     u = [x1.^2 x2.^2 x1 x2 ones(nm,1)]*vw;

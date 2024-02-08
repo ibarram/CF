@@ -1,0 +1,29 @@
+clc;
+close all;
+clear;
+
+du = 0.01;
+u_min = -10;
+u_max = 10;
+u = u_min:du:u_max;
+
+m = 2;
+s = 0.5;
+
+fu1 = 1./(1+exp(-u));
+fu2 = tanh(u);
+fu3 = exp(-((u-m).^2)./s.^2);
+
+figure('Units', 'normalized', 'Position', [0.1 0.1 0.8 0.8]);
+subplot(3, 2, 1);
+plot(u, fu1, 'r', 'LineWidth', 2);
+title('Sigmoide');
+grid on;
+subplot(3, 2, 2);
+plot(u, fu2, 'r', 'LineWidth', 2);
+grid on;
+title('Tangente hiperbolica');
+subplot(3, 2, 2);
+plot(u, fu2, 'r', 'LineWidth', 2);
+grid on;
+title('Tangente hiperbolica');
