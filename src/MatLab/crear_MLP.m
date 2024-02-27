@@ -16,5 +16,6 @@ for i1=1:nc
     else
         MLP1{i1}.W = 2*rand(S_MLP(i1-1)+1,S_MLP(i1))-1;
     end
-    MLP1{i1}.fA = FA_MLP{i1};
+    MLP1{i1}.fA = FA_MLP{1,i1};
+    MLP1{i1}.dfA = FA_MLP{2,i1};
 end
