@@ -2,8 +2,12 @@ clc;
 close all;
 clear;
 
-file_img = '/Users/ibarram/Dropbox/DICIS/Materias/ComputacionFlexible/bd/RGGB/Frutas01r_rggb.jpg';
-img_RGGB = imread(file_img);
+if ispc
+    file_img = 'C:\Users\ibarr\Dropbox\DICIS\Materias\ComputacionFlexible\Codigo\CF\bd\RGGB\Frutas01r_rggb.jpg';
+else
+    file_img = '/Users/ibarram/Library/CloudStorage/Dropbox/DICIS/Materias/ComputacionFlexible/Codigo/CF/bd/RGGB/Frutas01r_rggb.jpg';
+end
+img_RGGB = imread(file_img, 'JPEG');
 [lv, lu] = size(img_RGGB);
 
 %% Proximos vecinos
@@ -60,6 +64,64 @@ img_RGB2(:,:,1) = img_R;
 img_RGB2(:,:,2) = img_G;
 img_RGB2(:,:,3) = img_B;
 
+%% Bilineal
+img_R = zeros(lv, lu, 'double');
+img_G = zeros(lv, lu, 'double');
+img_B = zeros(lv, lu, 'double');
+
+% Color rojo
+img_R(1:2:lv, 1:2:lu) = double(img_RGGB(1:2:lv, 1:2:lu));
+img_R(1:2:lv, 2:2:(lu-2)) = (img_R(1:2:lv, 1:2:(lu-2))+img_R(1:2:lv, 3:2:lu))/2;
+img_R(2:2:(lv-2), 1:lu) = (img_R(1:2:(lv-2), 1:lu)+img_R(3:2:lv, 1:lu))/2;
+
+% Color verde
+img_G(1:2:lv, 2:2:lu) = double(img_RGGB(1:2:lv, 2:2:lu));
+img_G(2:2:lv, 1:2:lu) = double(img_RGGB(2:2:lv, 1:2:lu));
+img_G(1:2:lv, 3:2:lu) = (img_G(1:2:lv, 2:2:(lu-1))+img_G(1:2:lv, 4:2:lu))/2;
+img_G(2:2:lv, 2:2:(lu-2)) = (img_G(2:2:lv, 1:2:(lu-2))+img_G(2:2:lv, 3:2:lu))/2;
+
+% Color azul
+img_B(2:2:lv, 2:2:lu) = double(img_RGGB(2:2:lv, 2:2:lu));
+img_B(2:2:lv, 3:2:lu) = (img_B(2:2:lv, 2:2:(lu-1))+img_B(2:2:lv, 4:2:lu))/2;
+img_B(3:2:lv, 1:lu) = (img_B(2:2:(lv-1), 1:lu)+img_B(4:2:lv, 1:lu))/2;
+
+img_RGB3 = zeros(lv, lu, 3, 'uint8');
+img_RGB3(:,:,1) = uint8(img_R);
+img_RGB3(:,:,2) = uint8(img_G);
+img_RGB3(:,:,3) = uint8(img_B);
+
+%% Bicubico
+imgRGGBd = double(img_RGGB);
+imgRGB1 = zeros(lv, lu);
+imgRGB1(:,4:end-3)=(-imgRGGBd(:,1:end-6)+9*imgRGGBd(:,3:end-4)+9*imgRGGBd(:,5:end-2)-imgRGGBd(:,7:end))/16;
+
+img_R = zeros(lv, lu, 'double');
+img_G = zeros(lv, lu, 'double');
+img_B = zeros(lv, lu, 'double');
+
+img_R(1:2:lv, 1:2:lu) = imgRGGBd(1:2:lv, 1:2:lu);
+img_R(1:2:lv, 2:2:lu) = imgRGB1(1:2:lv, 2:2:lu);
+img_G(1:2:lv, 2:2:lu) = imgRGGBd(1:2:lv, 2:2:lu);
+img_G(2:2:lv, 1:2:lu) = imgRGGBd(2:2:lv, 1:2:lu);
+img_G(1:2:lv, 1:2:lu) = imgRGB1(1:2:lv, 1:2:lu);
+img_G(2:2:lv, 2:2:lu) = imgRGB1(2:2:lv, 2:2:lu);
+img_B(2:2:lv, 2:2:lu) = imgRGGBd(2:2:lv, 2:2:lu);
+img_B(2:2:lv, 1:2:lu) = imgRGB1(2:2:lv, 1:2:lu);
+
+imgRGB2 = zeros(lv, lu);
+imgRGB3 = zeros(lv, lu);
+imgRGB2(1:2:lv,:) = img_R(1:2:lv,:);
+imgRGB2(2:2:lv,:) = img_B(2:2:lv,:);
+imgRGB3(4:end-3,:)=(-imgRGB2(1:end-6,:)+9*imgRGB2(3:end-4,:)+9*imgRGB2(5:end-2,:)-imgRGB2(7:end,:))/16;
+
+img_R(2:2:lv,:) = imgRGB3(2:2:lv,:);
+img_B(1:2:lv,:) = imgRGB3(1:2:lv,:);
+
+img_RGB4 = zeros(lv, lu, 3, 'uint8');
+img_RGB4(:,:,1) = uint8(img_R);
+img_RGB4(:,:,2) = uint8(img_G);
+img_RGB4(:,:,3) = uint8(img_B);
+
 %% Grafica de imagenes
 figure(1);
 imshow(img_RGGB);
@@ -69,3 +131,9 @@ imshow(img_RGB);
 
 figure(3);
 imshow(img_RGB2);
+
+figure(4);
+imshow(img_RGB3);
+
+figure(4);
+imshow(img_RGB4);
