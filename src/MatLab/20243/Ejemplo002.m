@@ -24,25 +24,37 @@ X2 = Z2.*(ones(nc2,1)*sd(2,:))+ones(nc2,1)*md(2,:);
 %% Generación de muestras
 X = [X1 zeros(nc1,1);X2 ones(nc2,1)];
 nX = size(X);
-fa = (1/max(max(abs(X(:,1:(nX(2)-1))))))/1e4;
-ni_max = 1e8;
+fa = (1/max(max(abs(X(:,1:(nX(2)-1))))))/5e2;
+ni_max = 1e6;
 
 W = rand(nX(2),1);
+
+mX = 100;
+vX1 = min(X(:,1)):((max(X(:,1))-min(X(:,1)))/mX):max(X(:,1));
+vX2 = min(X(:,2)):((max(X(:,2))-min(X(:,2)))/mX):max(X(:,2));
+mX1 = ones(mX+1,1)*vX1;
+mX2 = vX2'*ones(1,mX+1);
+mXt = [mX1(:) mX2(:)];
+mY = zeros(mX+1,mX+1);
 
 SSEy = zeros(ni_max,1);
 figure(1);
 for i1=1:ni_max
-    plot(X1(:,1), X1(:,2), 'ro', 'MarkerSize', 10);
-    hold on;
-    plot(X2(:,1), X2(:,2), 'bs', 'MarkerSize', 10);
-    grid on;
     u = [X(:, 1:(nX(2)-1)) ones(nX(1), 1)]*W;
-    y = (u>=0);
+    y = 1./(1+exp(-u));
+    u1 = [mXt ones((mX+1)*(mX+1), 1)]*W;
+    mY(:) = 1./(1+exp(-u1));
+
+    surf(vX1,vX2,mY)
+    hold on;
+    plot3(X1(:,1), X1(:,2), zeros(nc1,1), 'ro', 'MarkerSize', 10);
+    hold on;
+    plot3(X2(:,1), X2(:,2), ones(nc2,1), 'bs', 'MarkerSize', 10);
+    grid on;
+    hold off;
+
     e = (X(:,end)-y);
     SSEy(i1) = e'*e;
-    rx2 = -W(1)*X(:,1)/W(2)-W(3)/W(2);
-    plot(X(:,1), rx2, 'r-', 'LineWidth', 3);
-    hold off;
-    W = W+fa*([X(:, 1:(nX(2)-1)) ones(nX(1), 1)]'*e);
+    W = W+fa*([X(:, 1:(nX(2)-1)) ones(nX(1), 1)]'*(e.*y.*(1-y)));
     pause(0.1);
 end
